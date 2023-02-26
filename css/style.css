@@ -98,6 +98,7 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 0 0 20px 20px;
+    overflow: hidden;
 }
 
 .text-area * {
@@ -108,6 +109,16 @@ body {
     margin: 5px 5px;
     background-color: #eee5f1;
     border-radius: 10px 10px 10px 3px;
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.recipient-text:nth-of-type(2) {
+    animation-delay: 1s;
+}
+.recipient-text:nth-of-type(6) {
+    animation-delay: 5s;
 }
 
 .sent-text {
@@ -116,6 +127,15 @@ body {
     margin: 5px 0 5px auto;
     background-color: white;
     border-radius: 10px 10px 3px 10px;
+    opacity: 0;
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+.sent-text:nth-of-type(5) {
+    animation-delay: 4s;
 }
 
 .recipient-text,
@@ -138,6 +158,11 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
+    opacity: 0;
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
 }
 
 .chat-picture img {
@@ -152,6 +177,17 @@ body {
     gap: 10px;
     align-items: center;
     border-radius: 10px 10px 10px 3px;
+    position: relative;
+    opacity: 0;
+    animation-name: left-to-right;
+    animation-duration: 1s;
+    overflow: hidden;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+}
+
+.offer:nth-of-type(8) {
+    animation-delay: 6.5s;
 }
 
 .offer .circle {
@@ -274,5 +310,26 @@ body {
     .background-lightpurple {
         right: -250px;
         bottom: -200px;
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1, 0.0001);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 100;
+    }
+}
+
+@keyframes left-to-right {
+    0% {
+        left: -200px;
+        opacity: 100%;
+    }
+    100% {
+        left: 0;
+        opacity: 100%;
     }
 }
