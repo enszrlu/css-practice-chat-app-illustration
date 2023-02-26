@@ -1,0 +1,278 @@
+@import url('https://fonts.cdnfonts.com/css/rubik');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    height: fit-content;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f7;
+    color: white;
+}
+
+.container {
+    width: fit-content;
+    min-height: 100%;
+    padding: 10% auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr;
+    gap: 50px;
+}
+
+.application-window {
+    width: 250px;
+    height: 500px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    width: 100%;
+    height: 65px;
+    border-radius: 20px 20px 0 0;
+}
+.notch {
+    width: 130px;
+    height: 20px;
+    border-radius: 0 0 15px 15px;
+    background-color: white;
+}
+
+.header-user {
+    padding: 10px 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.header-user * {
+    font-size: 10px;
+}
+
+.header-user img {
+    height: 30px;
+    border: 2px white solid;
+    border-radius: 50%;
+}
+
+.user-status {
+    opacity: 50%;
+    font-size: 7px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.header-user #menu {
+    justify-self: flex-end;
+    margin: auto 0 auto auto;
+}
+
+.text-area {
+    background-color: hsl(270, 20%, 96%);
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 20px 20px;
+}
+
+.text-area * {
+    font-size: 7px;
+}
+.recipient-text {
+    color: hsl(276, 55%, 52%);
+    margin: 5px 5px;
+    background-color: #eee5f1;
+    border-radius: 10px 10px 10px 3px;
+}
+
+.sent-text {
+    color: hsl(271, 15%, 43%);
+    justify-self: end;
+    margin: 5px 0 5px auto;
+    background-color: white;
+    border-radius: 10px 10px 3px 10px;
+}
+
+.recipient-text,
+.sent-text {
+    padding: 7px;
+    line-height: 0.7rem;
+    font-weight: 400;
+    max-width: 125px;
+    height: auto;
+    word-wrap: break-word;
+}
+.text-area img {
+    height: 40px;
+    width: 40px;
+}
+
+.chat-pictures {
+    justify-self: end;
+    margin: auto 0 auto auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.chat-picture img {
+    border-radius: 20%;
+}
+.offer {
+    background: linear-gradient(to left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    margin: 5px 5px;
+    max-width: 156px;
+    padding: 10px 5px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-radius: 10px 10px 10px 3px;
+}
+
+.offer .circle {
+    border: 2px white solid;
+    border-radius: 100%;
+    height: 10px;
+    width: 10px;
+    opacity: 50%;
+}
+
+.offer .duration {
+    opacity: 50%;
+}
+
+.offer .price {
+    justify-self: end;
+    margin: auto 5px auto auto;
+    font-size: 13px;
+}
+
+.type-area {
+    height: 30px;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    margin: 5px auto;
+    color: hsl(206, 6%, 79%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.type-area p {
+    font-size: 10px;
+    margin-left: 20px;
+    font-weight: 400;
+    opacity: 50%;
+}
+.type-area .send-message {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: hsl(271, 36%, 24%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.type-area .send-message i {
+    font-size: 12px;
+}
+
+.marketing-text {
+    height: fit-content;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    align-self: center;
+}
+.marketing-text h1 {
+    color: hsl(271, 36%, 24%);
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.marketing-text p {
+    color: hsl(270, 7%, 64%);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.background-purple,
+.background-lightpurple {
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    z-index: -100;
+}
+
+.background-purple {
+    border-radius: 0 0 250px 250px;
+    background: linear-gradient(45deg, #973bff 70%, #cf41ff);
+    left: -100px;
+    top: 0;
+}
+
+.background-lightpurple {
+    border-radius: 250px 250px 0 0;
+    background-color: hsl(270, 20%, 96%);
+    right: -200px;
+    bottom: 0px;
+}
+
+@media (max-width: 700px) {
+    .container {
+        padding: 10% 10%;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    .application-window {
+        margin: auto;
+    }
+    .marketing-text {
+        align-items: center;
+    }
+    .marketing-text p {
+        text-align: center;
+    }
+    .background-purple {
+        left: -250px;
+        top: -200px;
+    }
+
+    .background-lightpurple {
+        right: -250px;
+        bottom: -200px;
+    }
+}
